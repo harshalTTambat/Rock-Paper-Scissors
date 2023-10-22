@@ -23,13 +23,20 @@
         playGame('Scissors');
     ">Scissors</button>
 
+   
+    <p class="js-result"></p>
+    <p class="js-moves"></p>
+    <p class="js-scores"></p>
+
    <button onclick="
         score.wins = 0;
         score.losses = 0;
         score.Ties = 0;
-        // if we reset score and refresh the page the previous score should not come 
+        // if we reset score and refresh the page the previous score should not come
+        alert('Score resetting...!'); 
         localStorage.removeItem('scores');
-        alert('Score reseted.');
+        updateScoreEle();
+        
    ">Reset Score</button>
 
     <script>
@@ -48,6 +55,8 @@
                 Ties:0
             };
         }
+
+        updateScoreEle();
 
         function playGame(playerMove)
         {
@@ -113,12 +122,23 @@
             // using localStorage class methods
             // localStorage.setItem('massage', 'value as string') 
             // convering javascript object score to JSON string object
+            localStorage.setItem('scores',JSON.stringify(score));    
+            
+            updateScoreEle();
 
-            localStorage.setItem('scores',JSON.stringify(score));           
+            document.querySelector('.js-result').
+                innerHTML = `Result : ${result}`;
 
-            alert(`You picked ${playerMove}, Computer picked ${compMove}. Result : ${result} 
-            Wins: ${score.wins}, Losses: ${score.losses}, Tie: ${score.Ties}`);
+
+             document.querySelector('.js-moves').
+                innerHTML = `You picked ${playerMove}, Computer picked ${compMove}.`;
+
                     
+        }
+
+        function updateScoreEle(){
+             document.querySelector('.js-scores'). 
+                innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Tie: ${score.Ties}`;
         }
 
         function pickComputerMove()
@@ -140,7 +160,6 @@
             }
 
             return compMove;
-
         }
 
 
