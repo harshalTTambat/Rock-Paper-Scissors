@@ -1,5 +1,8 @@
 body{
     font-family: Arial;
+    margin-top: 10%;  
+    margin-left: 30%;
+    background-color: rgb(188, 185, 185);
 }
 .todo-grid,
 .todo-input-grid{

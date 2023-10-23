@@ -1,12 +1,6 @@
 
-const todoList = [{
-    name:"fuck",
-    dueDate: "2023-13-10"
-},
-{
-    name:"fuck again",
-    dueDate: "2023-13-11"
-}];
+const todoList = [];
+
 
 renderTodoList();
 
@@ -34,6 +28,7 @@ function renderTodoList()
         todoListHTML += html;
         document.querySelector('.js-todoList')
             .innerHTML = todoListHTML;
+
     
     }
 }
@@ -57,6 +52,5 @@ function addToDo()
     });
 
     inputEle.value = '';
-    
     renderTodoList();
 }
