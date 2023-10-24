@@ -10,35 +10,38 @@
 
 <body id="game">
 
-    <h1>Rock Paper Scissors</h1>
+    <div class="outer">
 
-    <button onclick="
-        playGame('Rock');
-    ">Rock</button>
+            <h1 class="title">Rock Paper Scissors</h1>
 
-    <button onclick="
-        playGame('Paper');
-    ">Paper</button>
+            <button  class="move-button js-rock-button">
+                <img src="/Rock Paper Scissors/imgs/Rock.png" alt="Rock" class="move-icon">
+            </button>
 
-    <button onclick=" 
-        playGame('Scissors');
-    ">Scissors</button>
+            <button class="move-button js-paper-button">
+                <img src="/Rock Paper Scissors/imgs/Paper.png" alt="Paper" class="move-icon">
+            </button>
 
-   
-    <p class="js-result"></p>
-    <p class="js-moves"></p>
-    <p class="js-scores"></p>
+            <button class="move-button js-scissors-button">
+                <img src="/Rock Paper Scissors/imgs/Scissors.png" alt="Scissors" class="move-icon">
+            </button>
 
-   <button onclick="
-        score.wins = 0;
-        score.losses = 0;
-        score.Ties = 0;
-        // if we reset score and refresh the page the previous score should not come
-        alert('Score resetting...!'); 
-        localStorage.removeItem('scores');
-        updateScoreEle();
         
-   ">Reset Score</button>
+            <p class="js-result result"></p>
+            <p class="js-moves"></p>
+            <p class="js-scores score" ></p>
+
+        <button onclick="
+                score.wins = 0;
+                score.losses = 0;
+                score.Ties = 0;
+                // if we reset score and refresh the page the previous score should not come
+                alert('Score resetting...!'); 
+                localStorage.removeItem('scores');
+                updateScoreEle();
+                
+        " class="reset-score-button">Reset Score</button>
+   </div>
 
     <script src="/Rock Paper Scissors/game.js"></script>
 </body>

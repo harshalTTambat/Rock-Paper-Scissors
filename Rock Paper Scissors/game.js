@@ -16,6 +16,21 @@ if (score === null) {
 
 updateScoreEle();
 
+document.querySelector('.js-rock-button')
+        .addEventListener('click', () => {
+            playGame('Rock');
+});
+
+document.querySelector('.js-paper-button')
+        .addEventListener('click', () => {
+            playGame('Paper');
+});
+
+document.querySelector('.js-scissors-button')
+        .addEventListener('click', () => {
+            playGame('Scissors');
+});
+
 function playGame(playerMove) {
     const compMove = pickComputerMove();
     result = '';
@@ -75,7 +90,8 @@ function playGame(playerMove) {
 
 
     document.querySelector('.js-moves').
-        innerHTML = `You picked ${playerMove}, Computer picked ${compMove}.`;
+        innerHTML = ` You picked <img src="/Rock Paper Scissors/imgs/${playerMove}.png" class="move-icon">, 
+        computer picked <img src="/Rock Paper Scissors/imgs/${compMove}.png" class="move-icon">`;
 
 
 }
