@@ -38,6 +38,9 @@ body{
     margin-right: 15px;
     cursor: pointer;
 }
+.move-button:hover{
+    background-color: rgb(56, 74, 29);
+}
 
 .result{
     font-size: 25px;
