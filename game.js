@@ -90,8 +90,8 @@ function playGame(playerMove) {
 
 
     document.querySelector('.js-moves').
-        innerHTML = ` You picked <img src="/Rock Paper Scissors/imgs/${playerMove}.png" class="move-icon">, 
-        computer picked <img src="/Rock Paper Scissors/imgs/${compMove}.png" class="move-icon">`;
+        innerHTML = ` You picked <img src="${playerMove}.png" class="move-icon">, 
+        computer picked <img src="${compMove}.png" class="move-icon">`;
 
 
 }
