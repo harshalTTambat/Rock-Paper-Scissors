@@ -58,3 +58,14 @@ body{
     padding: 8px 15px;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 600px) {
+    .outer {
+        height: 450px;
+        width: 400px;
+    }
+    .move-button{
+        width: 80px;
+        height: 80px;
+    }
+  }

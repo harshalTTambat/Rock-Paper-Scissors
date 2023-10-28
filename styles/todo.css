@@ -44,3 +44,28 @@ body{
     border-radius: 50px;
 }
 
+@media only screen and (max-width: 750px){
+    body{
+        margin-top: 10%;  
+        margin-left: 10%;
+    }
+    .todo-grid,
+    .todo-input-grid{
+        grid-template-columns: 180px 180px 180px;
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    body{
+        margin-top: 10%;  
+        margin-left: 20px;
+    }
+    .todo-grid,
+    .todo-input-grid{
+        grid-template-columns: 100px 150px 180px;
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+}
